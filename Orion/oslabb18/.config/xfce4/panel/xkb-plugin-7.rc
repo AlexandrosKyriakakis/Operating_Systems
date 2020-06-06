@@ -1,0 +1,11 @@
+display_type=0
+display_textsize=2
+group_policy=2
+default_group=0
+never_modify_config=false
+model=pc105
+layouts=us,gr
+variants=,extended
+toggle_option=grp:alt_shift_toggle
+compose_key_position=
+

@@ -1,0 +1,2 @@
+gcc -Wall -O2 -g -o scheduler-shell.o -c scheduler-shell.c
+Makefile:44: recipe for target 'scheduler-shell.o' failed
