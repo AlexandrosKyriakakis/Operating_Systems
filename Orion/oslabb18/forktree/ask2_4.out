@@ -1,0 +1,58 @@
+Parent: Creating pipe...
+Parent: Creating child...
+PID = 19575, name +, starting...
++ created
+Parent: Creating pipe...
+PID = 19576, name 10, starting...
+Leaf 10 created
+PID = 19577, name *, starting...
+My PID = 19575: Child PID = 19576 has been stopped by a signal, signo = 19
+* created
+Parent: Creating pipe...
+PID = 19578, name +, starting...
++ created
+Parent: Creating pipe...
+PID = 19579, name 4, starting...
+Leaf 4 created
+My PID = 19577: Child PID = 19579 has been stopped by a signal, signo = 19
+PID = 19580, name 5, starting...
+Leaf 5 created
+My PID = 19578: Child PID = 19580 has been stopped by a signal, signo = 19
+PID = 19581, name 7, starting...
+Leaf 7 created
+My PID = 19578: Child PID = 19581 has been stopped by a signal, signo = 19
+My PID = 19577: Child PID = 19578 has been stopped by a signal, signo = 19
+My PID = 19575: Child PID = 19577 has been stopped by a signal, signo = 19
+My PID = 19574: Child PID = 19575 has been stopped by a signal, signo = 19
+
+
++(19575)─┬─*(19577)─┬─+(19578)─┬─5(19580)
+         │          │          └─7(19581)
+         │          └─4(19579)
+         └─10(19576)
+
+
+PID = 19575, name = + is awake
+PID = 19576, name = 10 is awake and wrote to FD = 6
+Parent: received value 58 from the pipe. Will now compute.
+My PID = 19575: Child PID = 19576 terminated normally, exit status = 5
+PID = 19577, name = * is awake
+PID = 19578, name = + is awake
+PID = 19580, name = 5 is awake and wrote to FD = 8
+Parent: received value 53 from the pipe. Will now compute.
+My PID = 19578: Child PID = 19580 terminated normally, exit status = 5
+PID = 19581, name = 7 is awake and wrote to FD = 8
+Parent: received value 55 from the pipe. Will now compute.
+My PID = 19578: Child PID = 19581 terminated normally, exit status = 5
+I will execute 5 + 7 with result 12 !
+Parent: received value 60 from the pipe. Will now compute.
+My PID = 19577: Child PID = 19578 terminated normally, exit status = 0
+PID = 19579, name = 4 is awake and wrote to FD = 7
+Parent: received value 52 from the pipe. Will now compute.
+My PID = 19577: Child PID = 19579 terminated normally, exit status = 5
+I will execute 12 * 4 with result 48 !
+Parent: received value 96 from the pipe. Will now compute.
+My PID = 19575: Child PID = 19577 terminated normally, exit status = 0
+I will execute 10 + 48 with result 58 !
+My PID = 19574: Child PID = 19575 terminated normally, exit status = 0
+Parent: All done, exiting...

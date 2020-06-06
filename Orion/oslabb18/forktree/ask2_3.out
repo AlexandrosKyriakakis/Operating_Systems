@@ -1,0 +1,32 @@
+PID = 19370, name A, starting...
+PID = 19371, name B, starting...
+PID = 19372, name C, starting...
+PID = 19373, name D, starting...
+My PID = 19370: Child PID = 19372 has been stopped by a signal, signo = 19
+PID = 19374, name E, starting...
+My PID = 19370: Child PID = 19373 has been stopped by a signal, signo = 19
+PID = 19375, name F, starting...
+My PID = 19371: Child PID = 19374 has been stopped by a signal, signo = 19
+My PID = 19371: Child PID = 19375 has been stopped by a signal, signo = 19
+My PID = 19370: Child PID = 19371 has been stopped by a signal, signo = 19
+My PID = 19369: Child PID = 19370 has been stopped by a signal, signo = 19
+
+
+A(19370)─┬─B(19371)─┬─E(19374)
+         │          └─F(19375)
+         ├─C(19372)
+         └─D(19373)
+
+
+*PID = 19370, name = A is awake
+*PID = 19371, name = B is awake
+PID = 19374, name = E is awake
+My PID = 19371: Child PID = 19374 terminated normally, exit status = 0
+PID = 19375, name = F is awake
+My PID = 19371: Child PID = 19375 terminated normally, exit status = 0
+My PID = 19370: Child PID = 19371 terminated normally, exit status = 0
+PID = 19372, name = C is awake
+My PID = 19370: Child PID = 19372 terminated normally, exit status = 0
+PID = 19373, name = D is awake
+My PID = 19370: Child PID = 19373 terminated normally, exit status = 0
+My PID = 19369: Child PID = 19370 terminated normally, exit status = 1

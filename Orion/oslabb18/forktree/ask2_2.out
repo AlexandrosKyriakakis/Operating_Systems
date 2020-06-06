@@ -1,0 +1,35 @@
+A
+	B
+		E
+		F
+	C
+	D
+Node A created
+Node B created
+Node A waiting for all children to exit!
+Leaf C created and sleeping!
+Leaf D created and sleeping!
+Leaf E created and sleeping!
+Node B waiting for all children to exit!
+Leaf F created and sleeping!
+
+
+A(19096)─┬─B(19097)─┬─E(19100)
+         │          └─F(19101)
+         ├─C(19098)
+         └─D(19099)
+
+
+Leaf C exiting!
+Leaf D exiting!
+Leaf E exiting!
+My PID = 19096: Child PID = 19098 terminated normally, exit status = 5
+Leaf F exiting!
+My PID = 19096: Child PID = 19099 terminated normally, exit status = 5
+My PID = 19097: Child PID = 19100 terminated normally, exit status = 5
+My PID = 19097: Child PID = 19101 terminated normally, exit status = 5
+Node B exiting
+My PID = 19096: Child PID = 19097 terminated normally, exit status = 2
+Node A exiting
+My PID = 19095: Child PID = 19096 terminated normally, exit status = 2
+Root: All done, exiting...
