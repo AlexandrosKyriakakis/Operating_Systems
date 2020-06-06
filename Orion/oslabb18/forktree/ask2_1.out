@@ -1,0 +1,22 @@
+A created
+B created
+A waiting
+C created
+C sleeping
+B waiting
+D created
+D sleeping
+
+
+A(18877)─┬─B(18878)───D(18880)
+         └─C(18879)
+
+
+C exiting
+D exiting
+My PID = 18878: Child PID = 18880 terminated normally, exit status = 13
+B exiting
+My PID = 18877: Child PID = 18879 terminated normally, exit status = 17
+My PID = 18877: Child PID = 18878 terminated normally, exit status = 19
+A exiting
+My PID = 18876: Child PID = 18877 terminated normally, exit status = 16
